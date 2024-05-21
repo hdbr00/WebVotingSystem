@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    color: #416171;
+}
+
+/* ESTILOS BARRA NAVEGACIÓN*/
+
+nav {
+    background-color: #000c56;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.3rem 0;
+}
+
+.nav-marca {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-marca img {
+    margin-right: 0.8rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.btn-votacion {
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: #bebebe;
+    color: #334ce4;
+    padding: 0.6rem;
+}
+
+/* TERMINAN ESTILOS BARRA NAVEGACIÓN */
