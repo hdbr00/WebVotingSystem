@@ -4,34 +4,64 @@
   <img src="https://github.com/user-attachments/assets/32f22ebb-ec4d-4610-af9e-e1f2dc161bce" alt="vote" />
 </p>
 
-# Introducción
+## 1. Introducción
+<p>Este sistema fue creado con el fin de permitir a los usuarios ejecutar el derecho al voto, facilitando a los grupos con alguna discapacidad y/o con riesgo de salud poder
+ ejercer este derecho. Además, cualquier otra persona con algún tipo de inconveniente en el día de las votaciones, podrá hacer el uso del mismo.
+</p>
 
-<p>Este sistema fue creado para gestionar un proceso de votación, asegurando que cada usuario pueda votar una única vez.</p>
 
 ## Índice
-* [1. Diagrama de la Base de Datos](#1-diagrama-de-la-base-de-datos)
-* [2. Diagrama de Secuencia](#2-diagrama-de-secuencia)
-* [3. Estructura del Proyecto](#3-estructura-del-proyecto)
+* [1. Introducción](#1-introducción)
+* [2. Objetivos](#2-objetivos)
+* [3. Descripción del Proyecto](#3-descripción-del-proyecto)
+* [4. Criterios de éxito](#4-criterios-de-éxito)
+* [5. Diagrama de la Base de Datos](#5-diagrama-de-la-base-de-datos)
+* [6. Diagrama de Secuencia](#6-diagrama-de-secuencia)
+* [7. Estructura del Proyecto](#7-estructura-del-proyecto)
   * [Arquitectura en Capas](#arquitectura-en-capas)
   * [Identity](#identity)
   * [Envío de Correos](#envío-de-correos)
   * [Web APIs](#web-apis)
   * [Listado de Votaciones](#listado-de-votaciones)
-* [4. Módulos](#4-módulos)
+* [8. Módulos](#8-módulos)
   * [Gestión de Candidatos](#gestión-de-candidatos)
   * [Autenticación](#autenticación)
+* [9. Autor](#9-autor) 
 
-## 1. Diagrama de la Base de Datos
+
+
+## 2. Objetivos
+
+  - [ ] Habilitar un sistema que facilite el voto.
+  - [ ] Permitir el sufragio fuera de Costa Rica.
+
+## 3. Descripción del Proyecto
+<p>
+  El sistema permite gestionar a los candidatos y generará el conteo de votos al instante de cada uno de ellos. Se utiliza la autenticación en el electorado para que su sufragio sea de manera única. 
+</p>
+
+
+## 4. Criterios de éxito
+
+- [x] Conteo automático de votos.
+- [x] Validación único por persona. 
+- [x] Creación y carga de candidatos. 
+- [x] Creación de usuarios.
+- [x] Cierre de sesión después de ejecutar el voto.
+- [x] Carga de partidos / equipos.
+
+
+## 5. Diagrama de la Base de Datos
 <p> A continuación se muestra el diagrama de la base de datos que respalda la funcionalidad del sistema:</p>
 
 ![Diagrama de la Base de Datos](https://github.com/user-attachments/assets/bf298c2a-76e2-4d60-8123-51ce387cd060)
 
-## 2. Diagrama de Secuencia
+## 6. Diagrama de Secuencia
 <p>El diagrama de secuencia ilustra el flujo de interacciones durante el proceso de votación:</p>
 
 ![Diagrama de Secuencia](https://github.com/user-attachments/assets/05ad4c6d-50fc-4e84-997d-b5158224cd29)
 
-## 3. Estructura del Proyecto
+## 7. Estructura del Proyecto
 
 ### Arquitectura en Capas
 <p> El sistema está diseñado utilizando una arquitectura en capas para mejorar la organización y el mantenimiento del código:</p>
@@ -58,7 +88,7 @@
 
 ![Listado de Votaciones](https://github.com/hdbr00/VotingSystem/assets/119827170/548f0038-2ab2-4b59-b46e-7307bd6b680c)
 
-## 4. Módulos
+## 8. Módulos
 
 <p>El sistema está dividido en módulos que manejan distintas funcionalidades, facilitando la extensión y mantenimiento:</p>
 
@@ -73,4 +103,7 @@
 <p> El proceso de autenticación por facebook:</p>
 
 ![Autenticación](https://github.com/hdbr00/VotingSystem/assets/119827170/60dac356-9906-4922-879c-007457f050db)
+
+## 9. Autor.
+[@hdbr00](https://github.com/hdbr00)
 
