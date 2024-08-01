@@ -54,12 +54,12 @@
 ## 5. Diagrama de la Base de Datos
 <p> A continuación se muestra el diagrama de la base de datos que respalda la funcionalidad del sistema:</p>
 
-![Diagrama de la Base de Datos](https://github.com/user-attachments/assets/bf298c2a-76e2-4d60-8123-51ce387cd060)
+![Diagrama de la Base de Datos](https://github.com/hdbr00/SVotacion/raw/main/Assets/DiagramaBD.png)
 
 ## 6. Diagrama de Secuencia
 <p>El diagrama de secuencia ilustra el flujo de interacciones durante el proceso de votación:</p>
 
-![Diagrama de Secuencia](https://github.com/user-attachments/assets/05ad4c6d-50fc-4e84-997d-b5158224cd29)
+![Diagrama de secuencia](https://github.com/hdbr00/SVotacion/raw/main/Assets/Diagrama-de-secuencia.png)
 
 ## 7. Estructura del Proyecto
 
