@@ -1,8 +1,11 @@
 # Sistema de Votación
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/32f22ebb-ec4d-4610-af9e-e1f2dc161bce" alt="vote" />
-</p>
+
+  <p align="center">
+    <img src="https://github.com/hdbr00/SVotacion/raw/main/Assets/vote.PNG" />
+  </p>
+
+
 
 ## 1. Introducción
 <p>Este sistema fue creado con el fin de permitir a los usuarios ejecutar el derecho al voto, facilitando a los grupos con alguna discapacidad y/o con riesgo de salud poder
