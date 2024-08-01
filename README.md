@@ -107,6 +107,6 @@
 
 ![Autenticación](https://github.com/hdbr00/VotingSystem/assets/119827170/60dac356-9906-4922-879c-007457f050db)
 
-## 9. Autor.
-[@hdbr00](https://github.com/hdbr00)
+## 9. Desarrollador por:
+Henry Ledezma - [@hdbr00](https://github.com/hdbr00) Ⓡ
 
