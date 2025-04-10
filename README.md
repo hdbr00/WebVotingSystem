@@ -27,8 +27,6 @@
   * [Web APIs](#web-apis)
   * [Listado de Votaciones](#listado-de-votaciones)
 * [8. Módulos](#8-módulos)
-  * [Gestión de Candidatos](#gestión-de-candidatos)
-  * [Autenticación](#autenticación)
 * [9. Autor](#9-autor) 
 
 
@@ -95,17 +93,22 @@
 
 <p>El sistema está dividido en módulos que manejan distintas funcionalidades, facilitando la extensión y mantenimiento:</p>
 
-![Módulos](https://github.com/hdbr00/VotingSystem/assets/119827170/b429c306-a267-43fe-be72-f812ce0fd64e)
-
-### Gestión de Candidatos
-<p> Los candidatos son gestionados a través de un módulo específico:</p>
-
-![Gestión de Candidatos](https://github.com/hdbr00/VotingSystem/assets/119827170/c2a4df5a-1992-47ad-bde4-816125fff9b7)
-
-### Autenticación
-<p> El proceso de autenticación por facebook:</p>
-
-![Autenticación](https://github.com/hdbr00/VotingSystem/assets/119827170/60dac356-9906-4922-879c-007457f050db)
+<table>
+  <tr>
+    <td align="center" width="350">
+      <strong>Módulos</strong><br/>
+      <img src="https://github.com/hdbr00/VotingSystem/assets/119827170/b429c306-a267-43fe-be72-f812ce0fd64e" width="300"/><br/>
+    </td>
+    <td align="center" width="350">
+      <strong>Gestión de Candidatos</strong><br/>
+      <img src="https://github.com/hdbr00/VotingSystem/assets/119827170/c2a4df5a-1992-47ad-bde4-816125fff9b7" width="300"/><br/>
+    </td>
+    <td align="center" width="350">
+      <strong>Autenticación</strong><br/>
+      <img src="https://github.com/hdbr00/VotingSystem/assets/119827170/60dac356-9906-4922-879c-007457f050db" width="300"/><br/>
+    </td>
+  </tr>
+</table>
 
 ## 9. Desarrollador por:
 Henry Ledezma - [@hdbr00](https://github.com/hdbr00) Ⓡ
