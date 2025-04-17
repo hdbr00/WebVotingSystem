@@ -1,115 +1,136 @@
-# Sistema de Votación
+# Voting System
 
-
-  <p align="center">
-    <img src="https://github.com/hdbr00/SVotacion/raw/main/Assets/vote.PNG" />
-  </p>
-
-
-
-## 1. Introducción
-<p>Este sistema fue creado con el fin de permitir a los usuarios ejecutar el derecho al voto, facilitando a los grupos con alguna discapacidad y/o con riesgo de salud poder
- ejercer este derecho. Además, cualquier otra persona con algún tipo de inconveniente en el día de las votaciones, podrá hacer el uso del mismo.
+<p align="center">
+  <img src="https://github.com/hdbr00/SVotacion/raw/main/Assets/vote.PNG" />
 </p>
 
+## 1. Introduction
+<p>This system was created to enable users to exercise their right to vote, facilitating access for groups with disabilities and/or health risks to exercise this right. Additionally, any other person facing inconveniences on election day can use the system.
+</p>
 
-## Índice
-* [1. Introducción](#1-introducción)
-* [2. Objetivos](#2-objetivos)
-* [3. Descripción del Proyecto](#3-descripción-del-proyecto)
-* [4. Criterios de éxito](#4-criterios-de-éxito)
-* [5. Diagrama de la Base de Datos](#5-diagrama-de-la-base-de-datos)
-* [6. Diagrama de Secuencia](#6-diagrama-de-secuencia)
-* [7. Estructura del Proyecto](#7-estructura-del-proyecto)
-  * [Arquitectura en Capas](#arquitectura-en-capas)
+## Table of Contents
+* [1. Introduction](#1-introduction)
+* [2. Objectives](#2-objectives)
+* [3. Project Description](#3-project-description)
+* [4. Success Criteria](#4-success-criteria)
+* [5. Technical Stack](#5-technical-stack)
+* [6. Database Diagram](#6-database-diagram)
+* [7. Sequence Diagram](#7-sequence-diagram)
+* [8. Project Structure](#8-project-structure)
+  * [Layered Architecture](#layered-architecture)
   * [Identity](#identity)
-  * [Envío de Correos](#envío-de-correos)
+  * [Email Sending](#email-sending)
   * [Web APIs](#web-apis)
-  * [Listado de Votaciones](#listado-de-votaciones)
-* [8. Módulos](#8-módulos)
-* [9. Autor](#9-autor) 
+  * [Voting List](#voting-list)
+* [9. Modules](#9-modules)
+* [10. Author](#10-author)
 
+## 2. Objectives
 
+- [ ] Enable a system that facilitates voting.
+- [ ] Allow voting from outside Costa Rica.
 
-## 2. Objetivos
-
-  - [ ] Habilitar un sistema que facilite el voto.
-  - [ ] Permitir el sufragio fuera de Costa Rica.
-
-## 3. Descripción del Proyecto
+## 3. Project Description
 <p>
-  El sistema permite gestionar a los candidatos y generará el conteo de votos al instante de cada uno de ellos. Se utiliza la autenticación en el electorado para que su sufragio sea de manera única. 
+  The system allows managing candidates and generates instant vote counting for each of them. Voter authentication is used to ensure unique voting.
 </p>
 
+## 4. Success Criteria
 
-## 4. Criterios de éxito
+- [x] Automatic vote counting.
+- [x] Single validation per person.
+- [x] Candidate creation and management.
+- [x] User creation.
+- [x] Session termination after voting.
+- [x] Party/team management.
 
-- [x] Conteo automático de votos.
-- [x] Validación único por persona. 
-- [x] Creación y carga de candidatos. 
-- [x] Creación de usuarios.
-- [x] Cierre de sesión después de ejecutar el voto.
-- [x] Carga de partidos / equipos.
+## 5. 🛠️ Technical Stack
 
+### Core Development
+- **.NET 5.0** - Core framework
+- **C#** - Primary programming language
+- **ASP.NET Core** - Web framework
+- **Entity Framework Core 5.0.5** - ORM and database management
+- **SQL Server** - Database management system
 
-## 5. Diagrama de la Base de Datos
-<p> A continuación se muestra el diagrama de la base de datos que respalda la funcionalidad del sistema:</p>
+### Architecture & Design Patterns
+- **Repository Pattern** - Data access abstraction
+- **Unit of Work Pattern** - Transaction management
+- **MVC Architecture** - Model-View-Controller pattern
+- **Dependency Injection** - Dependency management
+- **Layered Architecture** - Basic separation of concerns
 
-![Diagrama de la Base de Datos](https://github.com/hdbr00/SVotacion/raw/main/Assets/DiagramaBD.png)
+### Frontend Development
+- **Razor Pages** - Server-side web pages
+- **Bootstrap 4.3.1** - Frontend framework
+- **jQuery & jQuery UI** - Interactivity and UI
+- **DataTables** - Table management
+- **HTML5/CSS3** - Structure and styling
 
-## 6. Diagrama de Secuencia
-<p>El diagrama de secuencia ilustra el flujo de interacciones durante el proceso de votación:</p>
+### Security & Authentication
+- **ASP.NET Core Identity** - Authentication and authorization
+- **Facebook Authentication** - Social login
+- **Data Annotations** - Data validation
+- **Secure Configuration** - Secret management
 
-![Diagrama de secuencia](https://github.com/hdbr00/SVotacion/raw/main/Assets/Diagrama-de-secuencia.png)
+## 6. Database Diagram
+<p> Below is the database diagram that supports the system's functionality:</p>
 
-## 7. Estructura del Proyecto
+![Database Diagram](https://github.com/hdbr00/SVotacion/raw/main/Assets/DiagramaBD.png)
 
-### Arquitectura en Capas
-<p> El sistema está diseñado utilizando una arquitectura en capas para mejorar la organización y el mantenimiento del código:</p>
+## 7. Sequence Diagram
+<p>The sequence diagram illustrates the flow of interactions during the voting process:</p>
 
-![Arquitectura en Capas](https://github.com/hdbr00/VotingSystem/assets/119827170/fa8318a0-d81b-49bb-8c29-55e9660b37db)
+![Sequence Diagram](https://github.com/hdbr00/SVotacion/raw/main/Assets/Diagrama-de-secuencia.png)
+
+## 8. Project Structure
+
+### Layered Architecture
+<p> The system is designed using a layered architecture to improve code organization and maintenance:</p>
+
+![Layered Architecture](https://github.com/hdbr00/VotingSystem/assets/119827170/fa8318a0-d81b-49bb-8c29-55e9660b37db)
 
 ### Identity
-<p>El módulo de Identity se utiliza para la gestión de usuarios y la autenticación</p>
+<p>The Identity module is used for user management and authentication</p>
 
 ![Identity](https://github.com/hdbr00/VotingSystem/assets/119827170/97e67733-d0e1-4c1f-81ba-6aa710662091)
 
-### Envío de Correos
-<p> Se incluye funcionalidad para el envío de correos electrónicos, utilizada para notificar a los usuarios sobre su votación:</p>
+### Email Sending
+<p> Includes functionality for sending emails, used to notify users about their voting:</p>
 
-![Envío de Correos](https://github.com/hdbr00/VotingSystem/assets/119827170/0eae8b11-6eb6-4bad-8b09-dc83aba9181a)
+![Email Sending](https://github.com/hdbr00/VotingSystem/assets/119827170/0eae8b11-6eb6-4bad-8b09-dc83aba9181a)
 
 ### Web APIs
-<p> El sistema expone varias Web APIs para permitir la integración con otros sistemas:</p>
+<p> The system exposes several Web APIs to allow integration with other systems:</p>
 
 ![Web APIs](https://github.com/hdbr00/VotingSystem/assets/119827170/c9893df0-f8e2-43a4-bebf-edfce0eaf163)
 
-### Listado de Votaciones
-<p>Los usuarios pueden ver una lista de las votaciones disponibles:</p>
+### Voting List
+<p>Users can view a list of available votes:</p>
 
-![Listado de Votaciones](https://github.com/hdbr00/VotingSystem/assets/119827170/548f0038-2ab2-4b59-b46e-7307bd6b680c)
+![Voting List](https://github.com/hdbr00/VotingSystem/assets/119827170/548f0038-2ab2-4b59-b46e-7307bd6b680c)
 
-## 8. Módulos
+## 9. Modules
 
-<p>El sistema está dividido en módulos que manejan distintas funcionalidades, facilitando la extensión y mantenimiento:</p>
+<p>The system is divided into modules that handle different functionalities, facilitating extension and maintenance:</p>
 
 <table>
   <tr>
     <td align="center" width="350">
-      <strong>Módulos</strong><br/>
+      <strong>Modules</strong><br/>
       <img src="https://github.com/hdbr00/VotingSystem/assets/119827170/b429c306-a267-43fe-be72-f812ce0fd64e" width="300"/><br/>
     </td>
     <td align="center" width="350">
-      <strong>Gestión de Candidatos</strong><br/>
+      <strong>Candidate Management</strong><br/>
       <img src="https://github.com/hdbr00/VotingSystem/assets/119827170/c2a4df5a-1992-47ad-bde4-816125fff9b7" width="300"/><br/>
     </td>
     <td align="center" width="350">
-      <strong>Autenticación</strong><br/>
+      <strong>Authentication</strong><br/>
       <img src="https://github.com/hdbr00/VotingSystem/assets/119827170/60dac356-9906-4922-879c-007457f050db" width="300"/><br/>
     </td>
   </tr>
 </table>
 
-## 9. Desarrollador por:
+## 10. Developed by:
 Henry Ledezma - [@hdbr00](https://github.com/hdbr00) Ⓡ
 
