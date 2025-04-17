@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebVotingSystem.Models.Publicacion>
+
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-lg-4">
+            <section class="get_in_touch">
+                <h1 class="title">Publicar Opinion</h1>
+
+                <div class="container-fluid">
+                    <div class="contact-form row">
+                        <form asp-controller="Opiniones" asp-action="Upsert" method="POST" class="w-100" id="formPublicar">
+                            <label for="opinion">Título opinión</label>
+                            <input type="text" class="input-text" name="titulo" placeholder="Su opinión" id="iTitulo">
+
+                            <label for="contenido">Contenido opinión</label>
+                            <textarea name="contenido" class="input-text" id="iContenido" cols="30" rows="10"></textarea>
+
+                            <input type="button" class="submit-btn mt-3 mx-auto" style="display: block;" value="Publicar" onclick="publicarArticulo();">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-6 ">
+            <div class="get_in_touch">
+                <h1 class="title">Mis Opiniones</h1>
+                <table id="tblMisOpiniones" class="table table-striped table-bordered" style="width:100%">
+
+                    <thead>
+                        <tr>
+                            <th>Nombre del votante</th>
+                            <th>Opinion</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Publicacion item in ViewBag.PublicacionesPropias)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Titulo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Contenido)
+                                </td>
+                                <td>
+                                    @*<a class="btn btn-warning btn-xs" role="button" asp-action="Edit" asp-route-id="@item.IdAlergia">Editar</a> |
+                                    <a class="btn btn-primary btn-xs" role="button" asp-action="Details" asp-route-id="@item.IdAlergia">Detalles</a> |
+                                    <a class="btn btn-danger btn-xs" role="button" asp-action="Delete" asp-route-id="@item.IdAlergia">Borrar</a>*@
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-12 get_in_touch">
+        <h1 class="title">Todas las opiniones</h1>
+        <table id="tblTodasOpiniones" class="table table-striped table-bordered" style="width:100%">
+
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Opinion</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Titulo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contenido)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="opinion">
+    
+</div>
+
+<hr>
+
+
+<script src="~/js/publicaciones.js"></script>
+<script>
+    cargarPublicaciones();
+</script>
