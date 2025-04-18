@@ -4,6 +4,8 @@
   <img src="https://github.com/hdbr00/SVotacion/raw/main/Assets/vote.PNG" />
 </p>
 
+⚠️ Note: This project is intended for demonstration purposes only. It requires additional configuration to run 
+
 ## 1. Introduction
 <p>This system was created to enable users to exercise their right to vote, facilitating access for groups with disabilities and/or health risks to exercise this right. Additionally, any other person facing inconveniences on election day can use the system.
 </p>
