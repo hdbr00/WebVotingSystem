@@ -46,7 +46,7 @@
 - [x] Session termination after voting.
 - [x] Party/team management.
 
-## 5. 🛠️ Technical Stack
+## 5.Technical Stack
 
 ### Core Development
 - **.NET 5.0** - Core framework
@@ -78,7 +78,7 @@
 ## 6. Database Diagram
 <p> Below is the database diagram that supports the system's functionality:</p>
 
-![Database Diagram](https://github.com/hdbr00/SVotacion/raw/main/Assets/DiagramaBD.png)
+![Image](https://github.com/user-attachments/assets/9477041c-0e83-47ed-be8d-558eb602f0be)
 
 ## 7. Sequence Diagram
 <p>The sequence diagram illustrates the flow of interactions during the voting process:</p>
@@ -100,17 +100,82 @@
 ### Email Sending
 <p> Includes functionality for sending emails, used to notify users about their voting:</p>
 
-![Email Sending](https://github.com/hdbr00/VotingSystem/assets/119827170/0eae8b11-6eb6-4bad-8b09-dc83aba9181a)
+``` Csharp
+ public class EmailSender : IEmailSender
+{
+    private readonly IEmailService _EmailService;
+    private readonly ILogger<EmailSender> _logger;
+
+    public EmailSender(IEmailService emailService, ILogger<EmailSender> logger)
+    {
+        _EmailService = emailService;
+        _logger = logger;
+    }
+
+    public Task SendEmailAsync(string email, string subject, string message)
+    {
+        return Execute(subject, message, email);
+    }
+
+    public Task Execute(string subject, string message, string email)
+    {
+        try
+        {
+            return _EmailService.SendAsync(email, subject, message, true);
+        }
+        catch (MailKit.Net.Smtp.SmtpProtocolException ex)
+        {
+            _logger.LogInformation(ex.ToString());
+        }
+        catch (MailKit.Net.Smtp.SmtpCommandException ex)
+        {
+            _logger.LogInformation(ex.ToString());
+        }
+        return null;
+    }
+}
+```
+
 
 ### Web APIs
 <p> The system exposes several Web APIs to allow integration with other systems:</p>
 
-![Web APIs](https://github.com/hdbr00/VotingSystem/assets/119827170/c9893df0-f8e2-43a4-bebf-edfce0eaf163)
+``` Csharp
+  [HttpDelete]
+  public IActionResult Borrar(int id)
+  {
+      var categoria = _controlador.Publicacion.Buscar(id);
+
+      if (categoria == null)
+      {
+          return Json(new { success = false, message = "Se ha producido un error mientras se borraba." });
+      }
+
+      _controlador.Publicacion.Remover(categoria);
+      _controlador.Guardar();
+
+      return Json(new { success = true, message = "El registro se ha borrado permanentemente." });
+  }
+```
 
 ### Voting List
 <p>Users can view a list of available votes:</p>
 
-![Voting List](https://github.com/hdbr00/VotingSystem/assets/119827170/548f0038-2ab2-4b59-b46e-7307bd6b680c)
+``` Csharp
+  [HttpGet]
+ public IActionResult Listar()
+ {
+     return Json(new { data = _controlador.Publicacion.Listar() });
+ }
+
+ [HttpPost]
+ public IActionResult ListarPublicacionesPropias()
+ {
+     var id = _userManager.GetUserId(User);
+     return Json(new { data = _controlador.Publicacion.Listar(
+         m => m.UsuarioId == id)});
+ }
+```
 
 ## 9. Modules
 
